@@ -8,11 +8,11 @@ const eventSchema = mongoose.Schema(
     category: { type: String, required: true },
     location: { type: String, required: true },
     date: { type: Date, required: true },
-    // createdBy: {
-    //   type: mongoose.Schema.Types.ObjectId,
-    //   ref: "User",
-    //   required: true,
-    // }, // Get ID of the user who create the event
+    createdBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    }, // Get ID of the user who create the event
   },
   {
     timestamps: true,
